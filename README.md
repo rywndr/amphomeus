@@ -9,7 +9,12 @@
 
 **Live App**: [https://amphomeus.vercel.app](https://amphomeus.vercel.app)
 
-*Try it out by creating your own journal entries!*_
+*Try it out by creating your own journal entries!*
+
+## 📱 Contact
+
+- **Discord**: $sudo
+- **X/Twitter**: [@kal_xyz](https://x.com/@kal_xyz)
 
 ### 🎬 See It In Action
 

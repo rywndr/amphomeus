@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amphomeus - Summer Memories",
+  title: "Amphomeus",
   description:
     "Capture your summer memories with Amphomeus, a gallery and journaling app.",
 };
