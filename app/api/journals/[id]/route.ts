@@ -9,15 +9,14 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
-    const resolvedParams = await params;
-    if (!resolvedParams || !resolvedParams.id) {
+    if (!params || !params.id) {
       return NextResponse.json(
         { error: 'Journal ID is required' },
         { status: 400 }
       );
     }
     
-    const journalId = resolvedParams.id;
+    const journalId = params.id;
     
     const journal = await prisma.journal.findUnique({
       where: {
@@ -51,15 +50,14 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
-    const resolvedParams = await params;
-    if (!resolvedParams || !resolvedParams.id) {
+    if (!params || !params.id) {
       return NextResponse.json(
         { error: 'Journal ID is required' },
         { status: 400 }
       );
     }
 
-    const journalId = resolvedParams.id;
+    const journalId = params.id;
 
     // Fetch journal to get media public_ids
     const journal = await prisma.journal.findUnique({
@@ -108,15 +106,14 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    const resolvedParams = await params;
-    if (!resolvedParams || !resolvedParams.id) {
+    if (!params || !params.id) {
       return NextResponse.json(
         { error: 'Journal ID is required' },
         { status: 400 }
       );
     }
 
-    const journalId = resolvedParams.id;
+    const journalId = params.id;
     const data = await request.json();
     
     // Validate required fields
