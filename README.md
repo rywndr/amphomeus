@@ -9,12 +9,11 @@
 
 **Live App**: [https://amphomeus.vercel.app](https://amphomeus.vercel.app)
 
-*Try it out by creating your own journal entries!*
+*Try it out by creating your own journal entries!*_
 
 ### 🎬 See It In Action
 
 [![Amphomeus Demo](https://img.youtube.com/vi/PLACEHOLDER/0.jpg)](https://www.youtube.com/watch?v=PLACEHOLDER "Amphomeus Demo")
-*Click the image to watch the demo video*
 
 ### 🌟 Key Features
 
