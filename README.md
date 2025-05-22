@@ -18,7 +18,7 @@
 
 ### 🎬 See It In Action
 
-[![Amphomeus Demo](https://img.youtube.com/vi/PLACEHOLDER/0.jpg)](https://www.youtube.com/watch?v=PLACEHOLDER "Amphomeus Demo")
+[![Amphomeus Demo](https://img.youtube.com/vi/PLACEHOLDER/0.jpg)](https://youtu.be/emIhQm7NYI0 "Amphomeus Demo")
 
 ### 🌟 Key Features
 
