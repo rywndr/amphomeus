@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📔 Amphomeus
+> *A journal and media gallery application*
 
-## Getting Started
+## ✨ About Amphomeus
 
-First, run the development server:
+**Amphomeus** is a journaling gallery application developed for the StackUp May 2025 Coding Challenge. This Next.js application allows users to create journal entries with images and videos, organize them with tags, and search through their collection.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Live App**: [https://amphomeus.vercel.app](https://amphomeus.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*Try it out by creating your own journal entries!*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🎬 See It In Action
 
-## Learn More
+[![Amphomeus Demo](https://img.youtube.com/vi/PLACEHOLDER/0.jpg)](https://www.youtube.com/watch?v=PLACEHOLDER "Amphomeus Demo")
+*Click the image to watch the demo video*
 
-To learn more about Next.js, take a look at the following resources:
+### 🌟 Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Amphomeus includes the following functionality:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Media Support** - Upload photos and videos with your journal entries
+- **Tagging System** - Categorize entries with custom tags for easy filtering
+- **Location Tracking** - Add location information to each journal entry
+- **Responsive Design** - Works on desktop and mobile devices
 
-## Deploy on Vercel
+Amphomeus provides a private space for storing memories, helping users maintain a digital record of experiences and moments without the distractions of social media.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔧 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Frontend**: Next.js, React, TailwindCSS
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL (via Prisma)
+- **Media Storage**: Cloudinary
+- **Authentication**: Supabase Auth
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- PostgreSQL database (or Supabase account)
+- Cloudinary account
+
+### Installation
+
+1. **Clone the repository**
+   ```zsh
+   git clone https://github.com/yourusername/amphomeus.git
+   cd amphomeus
+   ```
+
+2. **Install dependencies**
+   ```zsh
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file with the following:
+   ```
+   # Database
+   DATABASE_URL="your-postgresql-connection-string"
+   
+   # Supabase
+   NEXT_PUBLIC_SUPABASE_URL="your-supabase-url"
+   NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
+   
+   # Cloudinary
+   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="your-cloud-name"
+   CLOUDINARY_API_KEY="your-api-key"
+   CLOUDINARY_API_SECRET="your-api-secret"
+   ```
+
+4. **Set up the database**
+   ```zsh
+   # Push the schema to your database
+   npx prisma db push
+   
+   # Generate Prisma client
+   npx prisma generate
+   ```
+
+5. **Run the development server**
+   ```zsh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+6. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📱 Features
+
+- **Create Journal Entries** - Add title, content, date, and location
+- **Upload Media** - Drag and drop photos and videos
+- **Organize with Tags** - Create and assign custom tags
+- **Filter & Search** - Find entries by text or tags
+- **Responsive Gallery** - Toggle between grid and list views
+- **Edit Entries** - Update your journals anytime
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+<p align="center">
+  Made with ❤️
+</p>

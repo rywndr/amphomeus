@@ -405,14 +405,12 @@ export default function GalleryPage() {
                 )}
                 
                 <div className="mt-auto pt-2">
-                  {(view === 'list' || (view === 'grid' && (!journal.content || journal.content.length < 50))) && ( // Show view journal if list or grid with short/no content
-                     <Link href={`/gallery/${journal.id}`} className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium inline-flex items-center">
-                       View Journal
-                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3 ml-1">
-                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                       </svg>
-                     </Link>
-                  )}
+                  <Link href={`/gallery/${journal.id}`} className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium inline-flex items-center">
+                    View Journal
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3 ml-1">
+                      <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>
