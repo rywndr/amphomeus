@@ -6,17 +6,18 @@ import { MediaType } from '@/prisma/app/generated/prisma';
 // GET a specific journal by ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    if (!params || !params.id) {
+    const resolvedParams = await params;
+    if (!resolvedParams || !resolvedParams.id) {
       return NextResponse.json(
         { error: 'Journal ID is required' },
         { status: 400 }
       );
     }
     
-    const journalId = params.id;
+    const journalId = resolvedParams.id;
     
     const journal = await prisma.journal.findUnique({
       where: {
@@ -47,17 +48,18 @@ export async function GET(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    if (!params || !params.id) {
+    const resolvedParams = await params;
+    if (!resolvedParams || !resolvedParams.id) {
       return NextResponse.json(
         { error: 'Journal ID is required' },
         { status: 400 }
       );
     }
 
-    const journalId = params.id;
+    const journalId = resolvedParams.id;
 
     // Fetch journal to get media public_ids
     const journal = await prisma.journal.findUnique({
@@ -103,17 +105,18 @@ export async function DELETE(
 // PUT (update) a journal by ID
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    if (!params || !params.id) {
+    const resolvedParams = await params;
+    if (!resolvedParams || !resolvedParams.id) {
       return NextResponse.json(
         { error: 'Journal ID is required' },
         { status: 400 }
       );
     }
 
-    const journalId = params.id;
+    const journalId = resolvedParams.id;
     const data = await request.json();
     
     // Validate required fields
